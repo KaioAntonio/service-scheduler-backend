@@ -1,8 +1,8 @@
 package dev.kaio.enums;
 
 public enum AppointmentStatusEnum {
-    PENDING,
-    CONFIRMED,
-    CANCELED,
+    PENDENTE,
+    CONFIRMADO,
+    CANCELADO,
 
 }

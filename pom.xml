@@ -100,7 +100,6 @@
             <artifactId>scannotation</artifactId>
             <version>1.0.2</version>
         </dependency>
-        <!-- JAXB provider -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxb-provider</artifactId>
@@ -110,6 +109,21 @@
             <groupId>stax</groupId>
             <artifactId>stax</artifactId>
             <version>1.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>7.0.1.Final</version>
         </dependency>
     </dependencies>
 
