@@ -1,11 +1,12 @@
 package dev.kaio.dto.user;
 
 import dev.kaio.enums.UserTypeEnum;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 
 @Data
 public class UserRequestDTO {
@@ -14,7 +15,8 @@ public class UserRequestDTO {
             description = "Nome completo do usuário.",
             example = "Kaio Rodrigues"
     )
-    @NotBlank
+    @NotNull
+    @Size(min = 2, max = 50)
     private String name;
 
     @Schema(
@@ -22,14 +24,13 @@ public class UserRequestDTO {
             example = "kaio@example.com"
     )
     @Email
-    @NotBlank
     private String email;
 
     @Schema(
             description = "Senha do usuário.",
             example = "password123"
     )
-    @NotBlank
+    @Size(min = 6, max = 20)
     private String password;
 
     @Schema(

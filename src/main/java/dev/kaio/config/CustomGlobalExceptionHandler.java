@@ -9,8 +9,11 @@ import jakarta.ws.rs.ext.Provider;
 public class CustomGlobalExceptionHandler implements ExceptionMapper<ServiceException> {
 
     @Override
-    public Response toResponse(ServiceException exception)
-    {
-        return Response.status(Response.Status.BAD_REQUEST).entity(exception.getMessage()).build();
+    public Response toResponse(ServiceException exception) {
+        ErrorResponse errorResponse = new ErrorResponse(exception.getMessage());
+
+        return Response.status(Response.Status.BAD_REQUEST)
+                .entity(errorResponse)
+                .build();
     }
 }
