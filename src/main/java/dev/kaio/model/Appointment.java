@@ -1,7 +1,6 @@
 package dev.kaio.model;
 
 import dev.kaio.enums.AppointmentStatusEnum;
-import dev.kaio.enums.UserTypeEnum;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
